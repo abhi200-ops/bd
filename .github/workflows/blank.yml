@@ -1,0 +1,30 @@
+1. Installation of Hadoop 
+2. Configuration of Hadoop
+3. Basic HDFS commands 
+	a. Start the HDFS dfs
+	b. hdfs dfs -ls
+	c. hdfs dfs fsck
+	d. hdfs -put
+	e. hdfs dfs copyFromLocal
+		$ hdfs dfs -put /home/ubuntu/HadoopTesting/TrialTest.txt ~/HDFSData/
+
+	f. hdfs envvars
+	
+4. Introduce MapReduce
+5. Create the Mapper and Reduce python code for word count
+6. Through execution of code, understand the whole process of mapreduce execution.
+For testing mapreduce and reducer py files:
+echo 'jack be nimble jack be quick' | /home/ubuntu/mytrial/mapper.py | sort -t 1 | /home/ubuntu/mytrial/reducer.py
+
+For testing hadoop streaming :
+bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
+-files /home/ubuntu/mytrial/mapper.py,/home/ubuntu/mytrial/reducer.py \
+-mapper /home/ubuntu/mytrial/mapper.py \
+-reducer /home/ubuntu/mytrial/reducer.py \
+-input /home/ubuntu/HDFSData/TrialTest.txt \
+-output /home/ubuntu/HadoopOutput4/
+
+If output file exists, check using hdfs dfs -ls 
+
+Check the resuls for test purpose
+hdfs dfs -cat ~/HadoopOutput6/part-00000 | tail -n 5
