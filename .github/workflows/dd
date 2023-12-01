@@ -1,0 +1,11 @@
+if localhost port not found error in username in namenode and datanode.it will be in hdfs-site.xml.bin/hdfs nameode -format.restart dfs
+first start-dfs.sh or sbin/start-dfs.sh
+jps
+nikmonu@Assassin:~$ hdfs dfs -mkdir /user
+nikmonu@Assassin:~$ hdfs dfs -mkdir /user/hdfsdata
+
+go to iinux in file explorer then open ubuntu -openhome-openusername(ubuntu)-create a new folder inside the new folder create a text file
+copy the path of text file and paste it after hdfs dfs -put command remove \ with / and remove text before/home  
+
+nikmonu@Assassin:~$ hdfs dfs -put /home/nikmonu/txt/ab.txt /user/hdfsdata
+nikmonu@Assassin:~$ hdfs dfs -cat /user/hdfsdata/ab.txt
