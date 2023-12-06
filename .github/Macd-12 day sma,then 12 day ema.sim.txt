@@ -1,0 +1,26 @@
+Macd-12 day sma,then 12 day ema.similary 26 day sma and ema.
+Macd = 12 day ema-26 day ema
+Signal = 9 day ema of macd.
+Histogram=macd – signal
+
+Bollinger band=first 20 day sma,std
+Lower band = sma – 2 *std
+Upper =sma + 2 * std
+Ema=(closing price-previoys ema)*multiplier + previos ema
+Multiplier=2/(n+1)
+For mfi take low high and close.typival price is average of all three.
+Then profit with respect to previos typical price
+And loss with respect to previos typical price
+Mfr=( total profit with repsect to previous day/n)/(total loss wrt previous day/n)
+Mfi=100-100/(1+mfr)
+Williams=(highest high-close)/(highest high-lowest low)
+For rsi take closing price
+The profit wrt previos day
+Loss wrt previos day
+Rs=(Profit wrt/n)/(loss wrt/n)
+Rsi=100-100/(1+rs)
+Teynor measure=(portfolio returns-risk free returns)/beta(change)
+Sharpe ratio=(portfolio return – risk free returns)/std
+Capm(jensons measure)=rp-[rf + beta(rm-rf)]
+Rp is portfolio return,rf risk free return,rm expected market return.ignore rp if not given
+
